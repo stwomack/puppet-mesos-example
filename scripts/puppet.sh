@@ -14,8 +14,8 @@ fi
 
 # Ruby on Ubuntu is broken by design :(
 echo -e "----> ${green}Installing ruby${end}"
-sudo apt-get update
-sudo apt-get install ruby2.0 ruby2.0-dev -y
+sudo yum update
+sudo yum install ruby2.0 ruby2.0-dev -y
 for i in erb gem irb rake rdoc ri ruby testrb
 do
   sudo ln -sf /usr/bin/${i}2.0 /usr/bin/${i}
@@ -23,7 +23,7 @@ done
 
 # Install language locale as without can
 # interfere with package installation
-sudo apt-get install language-pack-en -y
+sudo yum install language-pack-en -y
 
 # Install puppet/facter
 echo -e "----> ${green}Installing puppet${end}"
