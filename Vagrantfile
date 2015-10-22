@@ -3,7 +3,7 @@
 
 VAGRANTFILE_API_VERSION = "2"
 
-$number_of_slaves = (ENV['MESOS_SLAVES'] || 3).to_i
+$number_of_slaves = (ENV['MESOS_SLAVES'] || 1).to_i
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if Vagrant.has_plugin?('vagrant-hostmanager')
